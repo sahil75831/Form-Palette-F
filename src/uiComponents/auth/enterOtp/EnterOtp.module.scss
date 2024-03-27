@@ -1,0 +1,40 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  gap: 2rem;
+  .container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: 100%;
+    // background-color: rebeccapurple;
+    justify-content: center;
+    .inputElement {
+      max-width: 100%;
+      min-width: 35px;
+      border: 1px solid gainsboro;
+      border-radius: 7px;
+      padding: 5px;
+      outline: none;
+      text-align: center;
+      &:focus {
+        border-color: black;
+        box-shadow: 1px 1px 5px black;
+        outline: none;
+      }
+      &::placeholder {
+        font-size: 1rem;
+        text-transform: capitalize;
+      }
+    }
+  }
+  > button {
+    width: 100%;
+  }
+  > h6 {
+    font-style: italic;
+    font-size: 1.1rem;
+  }
+}

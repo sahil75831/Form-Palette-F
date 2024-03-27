@@ -1,0 +1,25 @@
+.RegisterForm {
+  // background-color: greenyellow;
+  background-color: white;
+  width: 100%;
+  // border: 25px solid dodgerblue;
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    .inputElement {
+      width: 100%;
+      background-color: white;
+      // background-color: gold;
+      border: 1px solid gainsboro;
+      border-radius: 7px;
+      padding: 5px;
+      outline: none;
+      &::placeholder {
+        font-size: 1rem;
+        text-transform: capitalize;
+      }
+    }
+  }
+}

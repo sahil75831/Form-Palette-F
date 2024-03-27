@@ -1,0 +1,132 @@
+@import "../globals/global.scss";
+.AuthPage {
+  width: fit-content;
+  height: fit-content;
+  background-color: black;
+  // border: 10px solid green;
+  // overflow-x: clip;
+  .conatiner {
+    display: flex;
+    flex-direction: row;
+    @media screen and (max-width: $mbWidth) {
+      flex-direction: column;
+    }
+    position: relative;
+    .sectionOne {
+      flex: 1;
+      background-color: black;
+      height: 100vh;
+      position: sticky;
+      top: 0;
+      left: 0;
+
+      // width: 50vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      // padding: 5px;
+      .header {
+        padding: 1rem;
+
+        color: white;
+        font-family: "Arapey", serif;
+        font-weight: 400;
+        letter-spacing: 2px;
+        font-size: 1.5rem;
+      }
+      .logo {
+        img {
+          padding: 15px;
+        }
+      }
+      .footer {
+        padding: 1rem;
+        font-family: "Arapey", serif;
+        font-weight: 400;
+        letter-spacing: 2px;
+        font-size: 0.91rem;
+        color: white;
+      }
+    }
+    .sectionTwo {
+      flex: 1;
+      background-color: white;
+      // height: 100vh;
+      font-family: "Arapey", serif;
+      font-weight: 400;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: white;
+      // width: 35vw;
+      overflow-x: hidden;
+      @media screen and (max-width: $mbWidth) {
+        padding-top: 1rem;
+        // background-color: red;
+      }
+      .sectionTwo_wrapper {
+        @media screen and (max-width: $mbWidth) {
+          min-width: 90vw;
+          background-color: white;
+        }
+        width: 30vw;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        .sectionTwo_one {
+          background-color: white;
+          // background-color: orange;
+          text-align: center;
+          > h1 {
+            font-weight: 600;
+          }
+          > span {
+            font-size: 1.1rem;
+            color: gray;
+            font-family: "Arapey", serif;
+            font-weight: 400;
+          }
+        }
+        .sectionTwo_two {
+          background-color: white;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          .sectionTwo_form {
+            background-color: white;
+          }
+          .sectionTwo_agreement {
+            // width: 70%;
+            font-family: "Arapey", serif;
+            font-weight: 400;
+            font-size: 1.1rem;
+            color: gray;
+            padding-top: 2.5rem;
+            text-align: center;
+            // background-color: red;
+            span {
+              text-decoration: underline;
+              cursor: pointer;
+              padding: 0px 5px;
+            }
+          }
+          .sectionTwo_login {
+            padding-top: 1rem;
+            color: rgb(110, 110, 110);
+            text-align: center;
+            font-size: 1.3rem;
+            span {
+              text-decoration: underline;
+              cursor: pointer;
+              padding: 0px 5px;
+              color: rgb(57, 56, 56);
+            }
+          }
+        }
+      }
+    }
+  }
+}
