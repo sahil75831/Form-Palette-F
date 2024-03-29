@@ -1,0 +1,107 @@
+@import "../../../globals/global.scss";
+
+.CreateNewProject {
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    padding: 1rem;
+    box-shadow: $secondaryBoxShadow;
+    
+    .container {
+        border-bottom:2px solid red ;
+        border: $secondaryBorder;
+        border-radius: 10px;
+        padding: 1rem;
+        min-height: 100%;
+        max-height: 100%;
+        >h1 {
+            text-align: center;
+            font-size: 2rem;
+            color: black;
+            padding-bottom: 2rem;
+            @media screen and (max-width: $mbWidth) {
+                text-align: center;
+                font-size: 1.8rem;
+                font-weight: 500;
+            }
+        }
+        >form {
+            @media screen and (max-width: $mbWidth) {
+                width: 95%;
+            }
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            width: 50%;
+            margin: auto;
+            border-radius: 10px;
+            .projectName {
+                border: $primaryBorder;
+                padding: 1rem;
+                // background-color: red;
+                @media screen and (max-width: $mbWidth) {
+                    width: 100%;
+                }
+            }
+            .projectDescription {
+                border: $primaryBorder;
+                padding: 1rem;
+            }
+            .visiblitySection {
+                display: flex;
+                flex-direction: column;
+                padding: 1rem 0rem;
+                gap: 0.51rem;
+                .visiblitySectionLabels {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    label {
+                        display: flex;
+                        flex-direction: row;
+                        border: $primaryBorder;
+                        border-radius: 10px;
+                        padding: 0rem 1rem;
+
+                        >span {
+                            display: flex;
+                            align-items: center;
+                            gap: 1rem;
+                            color: $primaryColor;
+                            padding: 0.51rem 0.51rem;
+                        }
+                    }
+                }
+            }
+
+            .dateSection {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                >label {
+                    display: flex;
+                    flex-direction: column;
+
+                    >span {
+                        color: $primaryColor;
+                        padding: 0.51rem 0.51rem;
+                    }
+
+                    .startDate {
+                        border: $primaryBorder;
+                        border-radius: 10px;
+                        padding: 0.51rem 1rem;
+                        background-color: white;
+
+                        @media screen and (max-width: $mbWidth) {
+                            width: fit-content;
+                            padding: 0.51rem 0.31rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

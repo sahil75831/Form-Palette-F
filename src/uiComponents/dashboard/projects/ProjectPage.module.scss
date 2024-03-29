@@ -1,0 +1,60 @@
+@import "../../globals/global.scss";
+
+.ProjectPage {
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+
+
+    .wrapper {
+        padding: 1rem;
+        border: 2px solid gainsboro;
+        width: 100%;
+        height: 100%;
+        box-shadow: $primaryBoxShadow;
+        border-radius: 10px;
+
+        .head {
+            font-size: 2rem;
+            color: black;
+            font-weight: 600;
+            padding-bottom: 1rem;
+        }
+
+        .subhead {
+            display: flex;
+            justify-content: space-between;
+
+            >input {
+                width: 30%;
+                border: 1px solid gainsboro;
+                border-radius: 5px;
+                padding-left: 7px;
+                box-shadow: $primaryBoxShadow;
+            }
+
+            .btn {
+                border: 1px solid gainsboro;
+                border-radius: 50px;
+                padding: .51rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                transition: all 0.5s ease;
+                background-color: black;
+                color: white;
+                font-size: 1rem;
+                &:hover {
+                    scale: 1.03;
+                    
+                    box-shadow: 1px 1px 12px white;
+
+                }
+            }
+        }
+    }
+}

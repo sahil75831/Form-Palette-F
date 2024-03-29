@@ -1,0 +1,148 @@
+@import '../../../globals/global.scss';
+
+.ProjectCard {
+    .wrapper {
+        padding: 1rem 0rem;
+
+        >table {
+
+            border: 1px solid red;
+
+            >thead,
+            tbody {
+
+                >tr,
+                th,
+                td {
+                    border: 1px solid gainsboro;
+                    background-color: white;
+                    padding: 1rem 2rem;
+                }
+
+                th {
+                    color: $primaryColor;
+                }
+
+            }
+
+            .title {}
+
+            .desc {
+
+                white-space: nowrap;
+                /* Prevents the text from wrapping */
+                overflow: hidden;
+                /* Hides any text that overflows the container */
+                text-overflow: ellipsis;
+                /* Displays an ellipsis (...) when text overflows the container */
+                width: 200px;
+                /* Optional: Set a specific width for the container */
+
+
+                padding-right: 10rem;
+                width: 100%;
+
+            }
+
+            .status {
+                color: red;
+
+            }
+
+            .actions {
+                text-align: center;
+                color: black;
+                letter-spacing: 3px;
+                position: relative;
+                >span {
+                    cursor: pointer;
+                    color: black;
+                    font-weight: 900;
+                    font-size: 1.52rem;
+                }
+
+                .actionsButtonsCard {
+                    background-color: white;
+                    border: $primaryBorder;
+                    box-shadow: $secondaryBoxShadow;
+                    position: absolute;
+                    right: 10px;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    z-index: 2;
+
+                    >ul {
+                        padding: 1rem 0rem;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1rem;
+
+                        li {
+
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            justify-content: space-between;
+                            font-size: 1rem;
+                            font-weight: 300;
+                            gap: 2rem;
+                            padding: 0.51rem 1rem;
+                            transition: all 0.5s ease;
+
+                            &:hover {
+                                cursor: pointer;
+                                background-color: black;
+                                color: white;
+                            }
+
+                        }
+
+                    }
+
+                }
+            }
+
+        }
+
+        .pagination {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            text-align: center;
+            border: $primaryBorder;
+            padding: 1rem 2rem;
+            box-shadow: $primaryBoxShadow ;
+
+            .rowsNumber {
+                display: flex;
+                flex-direction: row;
+                gap: 2rem;
+                align-items: center;
+
+                >span {
+                    font-size: 1rem;
+                    color: $primaryColor;
+                }
+
+                >select {
+                    border: $primaryBorder;
+                    padding: 0.51rem 1rem;
+                    border-radius: 5px;
+                    box-shadow: $primaryBoxShadow;
+                    cursor: pointer;
+                }
+            }
+
+            span {
+                color: black;
+                font-size: 1.71rem;
+                font-weight: 600;
+                cursor: pointer;
+
+
+            }
+
+        }
+    }
+}
