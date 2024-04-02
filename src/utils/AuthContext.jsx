@@ -10,7 +10,7 @@ export const AuthWrapper = ({ children }) => {
     setUser(JSON.parse(localStorage.getItem("digiExcel_user")));
   }, []);
 
-  console.log("first pickup ", user);
+  
 
   const login = (user) => {
     setUser(user);
