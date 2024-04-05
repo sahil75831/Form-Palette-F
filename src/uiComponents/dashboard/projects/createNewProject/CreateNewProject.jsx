@@ -38,6 +38,7 @@ const CreateNewProject = () => {
           if (!res.ok) {
             throw new Error("Failed to fetch signed URL");
           }
+          console.log("response in nextjs :: ", res);
           return res.json();
         })
         .then((data) => {
@@ -59,6 +60,7 @@ const CreateNewProject = () => {
     e.preventDefault();
 
     fetch(signedURL, {
+      cache: "no-store",
       method: "PUT",
       headers: {
         "Content-Type": "multipart/form-data",
@@ -66,6 +68,8 @@ const CreateNewProject = () => {
       body: formData.brandImageUrl,
     })
       .then((res) => {
+        console.log("response in nextjs :2: ", res);
+        // console.log("response in nextjs :2: ", res.json())
         if (res.ok) {
           return res.json();
         } else {
@@ -73,7 +77,7 @@ const CreateNewProject = () => {
           throw new Error("Image upload failed"); // Re-throw for potential error handling
         }
       })
-      .then((data) => console.log(data))
+      .then((data) => console.log("blue froest data : ", data))
       .catch((err) => console.log("err : ", err));
 
     const { brandImageUrl, ...newData } = formData;
@@ -207,4 +211,3 @@ const CreateNewProject = () => {
 };
 
 export default CreateNewProject;
-

@@ -44,8 +44,15 @@
 
             }
 
-            .status {
+            .statusPending {
                 color: red;
+                font-weight: 600;
+
+            }
+
+            .statusPublished {
+                color: green;
+                font-weight: 600;
 
             }
 
@@ -54,6 +61,7 @@
                 color: black;
                 letter-spacing: 3px;
                 position: relative;
+
                 >span {
                     cursor: pointer;
                     color: black;
@@ -131,6 +139,7 @@
                     border-radius: 5px;
                     box-shadow: $primaryBoxShadow;
                     cursor: pointer;
+                    text-align: center;
                 }
             }
 
